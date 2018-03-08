@@ -7,7 +7,7 @@ from dwarf import checks
 from .controllers import WikiController
 
 
-class Core(Cog):
+class Wiki(Cog):
     """All commands that relate to management operations."""
 
     def __init__(self, bot, extension):
