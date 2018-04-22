@@ -29,7 +29,9 @@ class Wiki(Cog):
 
     async def on_message(self, message):
         prefix = self.wiki.get_wikiprefix()
-        if not message.content.startswith(prefix):
+        if (not message.content.startswith(prefix) or
+        message.content == prefix or
+        message.content.split(prefix, 1)[1].startswith(prefix)):
             return
 
         wiki = self.wiki.get_wiki(message.guild)
